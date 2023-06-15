@@ -93,7 +93,7 @@ body {
 
 .container {
     background-color: var(--clr-darkish-blue);
-    width: 414px;
+    max-width: 414px;
     height: 414px;
     border-radius: 32px;
 
@@ -107,7 +107,7 @@ body {
 }
 
 #feedback-form {
-    width: 350px;
+    max-width: 350px;
     display: flex;
     flex-direction: column;
     align-items: space-between;
@@ -208,18 +208,20 @@ input:focus + .circle-bg > .rating {
     display: none;
     flex-direction: column;
     align-items: center;
+    margin-top: 35px;
+    
 }
 
-.thank-you-image {
-    margin: 1rem;
-}
+
 
 .reply-rating {
-    margin:15px;
+    margin:30px;
     height: 40px;
     border-radius: 20px;
     background-color: var(--clr-dark-blue);
     color: var(--clr-orange);
+    display: flex;
+    align-items: center;
 }
 
 .reply-rating > p {
@@ -236,7 +238,7 @@ input:focus + .circle-bg > .rating {
     color: var(--clr-light-grey);
     font-size: var(--fs-p);
     text-align:center;
-    padding: 24px;
+    margin: 10px 36px;
 }
 
 .attribution {
