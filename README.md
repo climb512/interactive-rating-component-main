@@ -4,35 +4,18 @@
 
 ### Screenshot
 
-
+![Frontend-Mentor-Interactive-rating-component](https://github.com/climb512/interactive-rating-component-main/assets/19371146/b30b8417-bbd5-4402-b55b-5ba6307f53ab)
 
 ### Built with
 
 - Semantic HTML5 markup
 - Flexbox
-- JSON
-- Mobile-first workflow
+- JS form handling
 
 ### What I learned
 
-Practice with FORM elements and JSON.
-
-### Useful resources
-
-- HTML DOM Mozilla Docs
-https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API
-
-- DOM Manipulation in Vanilla JS
-https://www.ajaypalcheema.com/vanilla-js-dom/
-
-- Andy Bell's CSS Reset
-https://andy-bell.co.uk/a-modern-css-reset/
-
-
-- Useful, friendly introductions to Flexbox and Grid. Videos and Cheatsheets.
-https://www.youtube.com/c/joyshaheb
-
-
+Practice with FORM elements and Javascript.
+Styling and manipulation on radio button form elements with JS.
 
 ## Author
 
