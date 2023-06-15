@@ -158,20 +158,27 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-input:checked + .circle-bg {
+input:focus + .circle-bg {
     background: var(--clr-light-grey);
 }
 
-input:checked + .circle-bg > .rating {
+input:focus + .circle-bg > .rating {
     color: var(--clr-white);
 }
 
-/* for accessibility */
-input:focus + .circle-bg {
+input:hover + .circle-bg {
     background: var(--clr-orange);
 }
 
-input:focus + .circle-bg > .rating {
+input:hover + .circle-bg > .rating {
+    color: var(--clr-white);
+}
+
+input:checked  + .circle-bg {
+    background: var(--clr-orange);
+}
+
+input:checked  + .circle-bg > .rating {
     color: var(--clr-white);
 }
 
