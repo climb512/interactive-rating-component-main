@@ -5,61 +5,68 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
-  list-style: none;
+    list-style: none;
 }
 
 /* Set core root defaults */
 html:focus-within {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
-html, body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+html,
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
 }
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  text-decoration-skip-ink: auto;
+    text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
-img, picture, svg {
-  max-width: 100%;
-  display: block;
+img,
+picture,
+svg {
+    max-width: 100%;
+    display: block;
 }
 
 /* Inherit fonts for inputs and buttons */
-input, button, textarea, select {
-  font: inherit;
+input,
+button,
+textarea,
+select {
+    font: inherit;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
 @media (prefers-reduced-motion: reduce) {
-  html:focus-within {
-   scroll-behavior: auto;
-  }
-  
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
- /* ---end--- */
+    html:focus-within {
+        scroll-behavior: auto;
+    }
 
- :root {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ---end--- */
+
+:root {
     --clr-orange: hsl(25, 97%, 53%);
     --clr-white: hsl(0, 0%, 100%);
     --clr-light-grey: hsl(217, 12%, 63%);
@@ -72,7 +79,7 @@ input, button, textarea, select {
     --ff-overpass: 'Overpass', sans-serif;
     --fw-regular: 400;
     --fw-bold: 700;
- }
+}
 
 body {
     background-color: var(--clr-very-dark-blue);
@@ -88,17 +95,17 @@ body {
     width: 414px;
     height: 414px;
     border-radius: 32px;
-    
+
 }
 
-.rating-state {
+#rating-state {
     display: flex;
     flex-direction: column;
     align-items: start;
     padding: 2rem;
 }
 
-.feedback-form {
+#feedback-form {
     width: 350px;
     display: flex;
     flex-direction: column;
@@ -139,11 +146,39 @@ body {
     font-weight: var(--fw-bold);
 }
 
+input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.rating {
+    padding: 22px;
+    cursor: pointer;
+}
+
+input:checked + .circle-bg {
+    background: var(--clr-light-grey);
+}
+
+input:checked + .circle-bg > .rating {
+    color: var(--clr-white);
+}
+
+/* for accessibility */
+input:focus + .circle-bg {
+    background: var(--clr-orange);
+}
+
+input:focus + .circle-bg > .rating {
+    color: var(--clr-white);
+}
+
 .submit {
     box-sizing: border-box;
     flex-basis: 100%;
     background-color: var(--clr-orange);
-    color: hsl(0, 0%, 100%);
+    color: var(--clr-white);
     font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: .16rem;
@@ -153,7 +188,7 @@ body {
     margin-block-start: 8px;
     margin-block-end: 8px;
     margin-top: 36px;
-    cursor: pointer;  
+    cursor: pointer;
     align-items: center;
     overflow: hidden;
     padding: 0px;
@@ -161,17 +196,23 @@ body {
     vertical-align: middle;
 }
 
+.submit:hover {
+    background-color: var(--clr-white);
+    color: var(--clr-orange);
+}
 
-.thank-you-state {
+
+#thank-you-state {
     display: none;
 }
 
-.attribution { 
+.attribution {
     color: var(--clr-white);
-    font-size: 11px; 
-    text-align: center; 
+    font-size: 11px;
+    text-align: center;
     margin-top: 30px;
 }
-.attribution a { 
+
+.attribution a {
     color: var(--clr-orange);
 }
