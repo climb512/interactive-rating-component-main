@@ -76,6 +76,7 @@ select {
     --clr-very-dark-blue: hsl(216, 12%, 8%);
 
     --fs-p: 0.9375rem;
+    --fs-h: 1.8rem;
     --ff-overpass: 'Overpass', sans-serif;
     --fw-regular: 400;
     --fw-bold: 700;
@@ -201,9 +202,41 @@ input:focus + .circle-bg > .rating {
     color: var(--clr-orange);
 }
 
+/* -- -- -- -- -- -- -- -- -- -- -- -- */
 
 #thank-you-state {
     display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.thank-you-image {
+    margin: 1rem;
+}
+
+.reply-rating {
+    margin:15px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: var(--clr-dark-blue);
+    color: var(--clr-orange);
+}
+
+.reply-rating > p {
+    padding: 0 16px;
+}
+
+.thank-you-p { 
+    color: var(--clr-white);
+    font-size: var(--fs-h);
+    margin: 0.5rem;
+}
+
+.thank-you-message {
+    color: var(--clr-light-grey);
+    font-size: var(--fs-p);
+    text-align:center;
+    padding: 24px;
 }
 
 .attribution {
