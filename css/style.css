@@ -158,11 +158,11 @@ input[type="radio"] {
     cursor: pointer;
 }
 
-input:focus + .circle-bg {
+input:checked + .circle-bg {
     background: var(--clr-light-grey);
 }
 
-input:focus + .circle-bg > .rating {
+input:checked + .circle-bg > .rating {
     color: var(--clr-white);
 }
 
@@ -174,11 +174,11 @@ input:hover + .circle-bg > .rating {
     color: var(--clr-white);
 }
 
-input:checked  + .circle-bg {
-    background: var(--clr-orange);
+input:focus + .circle-bg {
+    background: var(--clr-light-grey);
 }
 
-input:checked  + .circle-bg > .rating {
+input:focus + .circle-bg > .rating {
     color: var(--clr-white);
 }
 
